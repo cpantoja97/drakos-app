@@ -14,7 +14,11 @@ declare global {
 }
 
 // Middleware to inject Prisma into req
-const injectDependencies = (req: Request, res: Response, next: NextFunction) => {
+const injectDependencies = (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
   req.db = prisma;
   next();
 };

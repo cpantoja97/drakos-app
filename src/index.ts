@@ -1,15 +1,14 @@
 import express, { Request, Response } from 'express';
 import { injectDependencies } from './middleware/dependencies';
 
-
 // Initialize the app
 const app = express();
 
-// Middleware to parse JSON
-app.use(express.json());
-
 // Middleware to inject dependencies
 app.use(injectDependencies);
+
+// Middleware to parse JSON
+app.use(express.json());
 
 // Basic route to test
 app.get('/', (req: Request, res: Response) => {
