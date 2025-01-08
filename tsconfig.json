@@ -17,6 +17,6 @@
     "strictNullChecks": true,
     "lib": ["es2020"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/prisma"],
   "exclude": ["node_modules", "dist"]
 }
